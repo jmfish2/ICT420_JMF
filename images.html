@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+  </head>
+  <body>
+    <h1>Playing with Images</h1>
+    <img src="images/logo.jpg" alt="Inverted Trinity Knot Logo" title="An vector image I made in Adobe Illustrator.">
+    <p>Controlling for height:</p>
+    <img src="images/logo.jpg" alt="Inverted Trinity Knot Logo" title="An vector image I made in Adobe Illustrator."
+    height="142">
+    <p>Controlling for width:</p>
+    <img src="images/logo.jpg" alt="Inverted Trinity Knot Logo" title="An vector image I made in Adobe Illustrator."
+    width="252">
+    <p>Display Image from Remote Server:</p>
+    <figure>
+    <img src="https://image.shutterstock.com/image-vector/celtic-trinity-knot-450w-608285987.jpg" alt="Image on Shutterstock">
+    <figcaption>Celtic Knot found on Shutterstock</figcaption>
+    </figure>
+    <br>
+    <p>Responsive Design Images:</p>
+    <img srcset="images/logo.jpg 480w"
+          sizes="(max-width: 480px) 440px"
+          src="images/logo.jpg" alt="Test">
+  </body>
+</html>
