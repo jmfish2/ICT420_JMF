@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+  </head>
+  <body>
+    <h1>Playing with Embedding</h1>
+
+    <p>Image Mapped on the Three Points:</p>
+    <figure>
+      <img src="images/logo.jpg" alt="" usemap="#map" />
+      <figcaption>Original Art Using Adobe Illustrator. Points are clickable!</figcaption>
+    </figure>
+    <map name="map">
+      <area shape="poly" coords="332, 303, 310, 264, 287, 237, 251, 295, 283, 303"
+      href="https://www.youtube.com/watch?v=YhJ44R1UpaU" title="Learn to Draw a Trinity Knot"
+      alt="Video:How to Make a Trinity Knot"
+      target="_blank"
+      />
+      <area shape="poly" coords="74, 236, 45, 262, 31, 304, 77, 305, 113, 298"
+      href="https://www.youtube.com/watch?v=S_ADKryAL7g" title=" When I am King by Great Big Sea"
+      alt="Music Video: When I am King by Great Big Sea"
+      target="_blank" />
+      <area shape="poly" coords="178, 43, 157, 78, 148, 111, 209, 109, 201, 77"
+      href="audio/DarcysDrunkenDonkey.mp3" title="Worth a Listen! Darcy's Drunken Donkey by Gaelic Storm"
+      alt="Song:Darcy's Drunken Donkey"
+      target="_blank"
+      />
+    </map>
+
+    <p>A Little Music for the Theme</p>
+    <figure>
+      <audio controls src="audio/DarcysDrunkenDonkey.mp3"> Your browser does not support the <code>audio</code> element.
+      </audio>
+    </figure>
+
+    <p>Embedded Video</p>
+    <iframe width="400" src="https://www.youtube.com/embed/S_ADKryAL7g" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </body>
+</html>
