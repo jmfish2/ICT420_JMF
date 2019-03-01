@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Forms</title>
+  </head>
+  <body>
+    <h1>Creating Forms</h1>
+
+    <form action="" method="post">
+      <div class="subscribe">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="subscribe">
+        <label for="email">Enter your email address: </label>
+        <input type="text" name="email" id="email" required>
+      </div>
+      <div class="">
+        <input type="submit" value="Subscribe!">
+      </div>
+    </form>
+    <h2>Create a button</h2>
+
+    <form class="" action="" method="get">
+      <div class="">
+        <button type="button" name="button">Click if you heart buttons.</button>
+      </div>
+    </form>
+    <h2>Create a Datalist</h2>
+
+    <form class="" action="index.html" method="get">
+      <div class="">
+        <label for="myOS">What is your favorite OS?</label>
+        <input list="OS" name="myOS" id="myOS">
+        <datalist id="OS">
+          <option value="GNU/Linux"></option>
+          <option value="Linux"></option>
+          <option value="BSD"></option>
+          <option value="Windows"></option>
+          <option value="macOS"></option>
+        </datalist>
+      </div>
+    </form>
+
+    <h2>Pre-defined List of Options</h2>
+
+    <form class="" action="index.html" method="get">
+      <label for="home-structure">What kind of house would you like to have?</label>
+      <select class="" name="structure" id="home-structure">
+        <option value="">**Please choose an option**</option>
+        <option value="Castle">Castle</option>
+        <option value="Tree house">Tree house</option>
+        <option value="Tiny home">Tiny home</option>
+      </select>
+    </form>
+
+    <h2>Legend and Fieldset</h2>
+
+    <form class="" action="index.html" method="get">
+      <fieldset>
+        <legend>Choose your favorite technology</legend>
+        <input type="radio" name="pencil" id="pencil">
+        <label for="pencil">pencil</label><br>
+
+        <input type="radio" name="smartphone" id="smartphone">
+        <label for="smartphone">smartphone</label><br>
+
+        <input type="radio" name="ERM" id="ERM">
+        <label for="ERM">ERM device</label>
+      </fieldset>
+    </form>
+
+    <h2>Text Area</h2>
+
+    <form class="" action="index.html" method="post">
+      <label for="thoughts">What are you thinking about ICT nowadays?</label>
+      <textarea name="name" rows="8" cols="80">Enter here:</textarea>
+    </form>
+  </body>
+</html>
