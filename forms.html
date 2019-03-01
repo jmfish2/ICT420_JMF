@@ -4,79 +4,93 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating Forms</title>
+
+    <style media="screen">
+      caption {
+        font-size: 1.5em;
+        text-transorm: uppercase;
+        text-shadow: 3px 3px 4px black;
+        padding-bottom: 5px;
+      }
+      thead, tfoot {
+        background-color: #082974;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td, th {
+        padding: 5px 10px;
+      }
+    </style>
+
   </head>
   <body>
     <h1>Creating Forms</h1>
 
-    <form action="" method="post">
-      <div class="subscribe">
-        <label for="name">Enter your name: </label>
-        <input type="text" name="name" id="name" required>
-      </div>
-      <div class="subscribe">
-        <label for="email">Enter your email address: </label>
-        <input type="text" name="email" id="email" required>
-      </div>
-      <div class="">
-        <input type="submit" value="Subscribe!">
-      </div>
-    </form>
-    <h2>Create a button</h2>
+    <h2>Slider Function</h2>
 
-    <form class="" action="" method="get">
-      <div class="">
-        <button type="button" name="button">Click if you heart buttons.</button>
-      </div>
-    </form>
-    <h2>Create a Datalist</h2>
+      <form oninput="r.value=parseInt((a.value*255/100), 10).toString(16)">00
+      <input type="range" id="a" value="0">ff
+      =<output name="r" for="a">0</output> Red
+      </form>
+      <form oninput="g.value=parseInt((a.value*255/100), 10).toString(16)">00
+      <input type="range" id="a" value="0">ff
+      =<output name="g" for="a">0</output> Green
+      </form>
+      <form oninput="b.value=parseInt((a.value*255/100), 10).toString(16)">00
+      <input type="range" id="a" value="0">ff
+      =<output name="b" for="a">0</output> Blue
+      </form>
+      <output name="hex" for="a g b">#000000</output>
 
-    <form class="" action="index.html" method="get">
-      <div class="">
-        <label for="myOS">What is your favorite OS?</label>
-        <input list="OS" name="myOS" id="myOS">
-        <datalist id="OS">
-          <option value="GNU/Linux"></option>
-          <option value="Linux"></option>
-          <option value="BSD"></option>
-          <option value="Windows"></option>
-          <option value="macOS"></option>
-        </datalist>
-      </div>
-    </form>
+      <table>
+        <caption>Color Combination Chart</caption>
+        <thead>
+          <tr>
+            <th colspan="1"></th>
+            <th colspan="3"></th>
+            <th colspan="1"></th>
+          </tr>
+          <tr>
+            <td>Red</td>
+            <td>Green</td>
+            <td>Blue</td>
+            <td>Combination</td>
+          </tr>
 
-    <h2>Pre-defined List of Options</h2>
+        </thead>
 
-    <form class="" action="index.html" method="get">
-      <label for="home-structure">What kind of house would you like to have?</label>
-      <select class="" name="structure" id="home-structure">
-        <option value="">**Please choose an option**</option>
-        <option value="Castle">Castle</option>
-        <option value="Tree house">Tree house</option>
-        <option value="Tiny home">Tiny home</option>
-      </select>
-    </form>
+        <tbody>
+          <tr>
+            <td>RBG Value</td>
+            <td>92</td>
+            <td>18</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>Hex Value</td>
+            <td>160</td>
+            <td>40</td>
+            <td>200</td>
+          </tr>
 
-    <h2>Legend and Fieldset</h2>
+        </tbody>
 
-    <form class="" action="index.html" method="get">
-      <fieldset>
-        <legend>Choose your favorite technology</legend>
-        <input type="radio" name="pencil" id="pencil">
-        <label for="pencil">pencil</label><br>
+        <tfoot>
+        <tr>
+          <td>RGB Combination</td>
+          <td>Value 1</td>
+        </tr>
+        <tr>
+          <td>Hex Combination</td>
+          <td>Value 2</td>
+        </tr>
+        </tfoot>
+      </table>
 
-        <input type="radio" name="smartphone" id="smartphone">
-        <label for="smartphone">smartphone</label><br>
-
-        <input type="radio" name="ERM" id="ERM">
-        <label for="ERM">ERM device</label>
-      </fieldset>
-    </form>
-
-    <h2>Text Area</h2>
-
-    <form class="" action="index.html" method="post">
-      <label for="thoughts">What are you thinking about ICT nowadays?</label>
-      <textarea name="name" rows="8" cols="80">Enter here:</textarea>
-    </form>
   </body>
 </html>
