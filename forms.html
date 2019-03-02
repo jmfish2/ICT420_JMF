@@ -8,8 +8,8 @@
     <style media="screen">
       caption {
         font-size: 1.5em;
-        text-transorm: uppercase;
-        text-shadow: 3px 3px 4px black;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 3px black;
         padding-bottom: 5px;
       }
       thead, tfoot {
@@ -33,64 +33,69 @@
 
     <h2>Slider Function</h2>
 
-      <form oninput="r.value=parseInt((a.value*255/100), 10).toString(16)">00
-      <input type="range" id="a" value="0">ff
-      =<output name="r" for="a">0</output> Red
+      <form oninput="hexr.value=parseInt((rd.value*255/100), 10).toString(16);
+                      hexg.value=parseInt((gr.value*255/100), 10).toString(16);
+                      hexb.value=parseInt((bl.value*255/100), 10).toString(16);
+                      r.value=parseInt((rd.value*255/100), 10);
+                      g.value=parseInt((gr.value*255/100), 10);
+                      b.value=parseInt((bl.value*255/100), 10);
+                      fullhex.value='#'+hexr.value+hexg.value+hexb.value;
+                      fullrgb.value='('+r.value+','+g.value+','+b.value+')';
+                      myFunction();">
+
+        <script>
+              function myFunction() {
+                var x=document.getElementsByName("r");
+                var y=document.getElementsByName("g");
+                var z=document.getElementsByName("b");
+                document.body.style.backgroundColor = 'rgb(' + x[0].value + ',' + y[0].value + ',' + z[0].value + ')';
+              }
+        </script>
+
+        <table>
+          <caption>Color Combination Chart</caption>
+          <thead>
+            <tr>
+              <td></td>
+              <td>Red</td>
+              <td>Green</td>
+              <td>Blue</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="range" id="rd" value="0"></td>
+              <td><input type="range" id="gr" value="0"></td>
+              <td><input type="range" id="bl" value="0"></td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>RBG Value</td>
+              <td><output name="r" for="rd">0</output></td>
+              <td><output name="g" for="gr">0</output></td>
+              <td><output name="b" for="bl">0</output></td>
+            </tr>
+            <tr>
+              <td>Hex Value</td>
+              <td><output name="hexr" for="rd">0</output></td>
+              <td><output name="hexg" for="gr">0</output></td>
+              <td><output name="hexb" for="bl">0</output></td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td>RGB Combination</td>
+              <td colspan="3"><output name="fullrgb" for="rd gr bl"></output></td>
+            </tr>
+            <tr>
+              <td>Hex Combination</td>
+              <td colspan="3"><output name="fullhex" for="rd gr bl"></output></td>
+            </tr>
+          </tfoot>
+        </table>
+
       </form>
-      <form oninput="g.value=parseInt((a.value*255/100), 10).toString(16)">00
-      <input type="range" id="a" value="0">ff
-      =<output name="g" for="a">0</output> Green
-      </form>
-      <form oninput="b.value=parseInt((a.value*255/100), 10).toString(16)">00
-      <input type="range" id="a" value="0">ff
-      =<output name="b" for="a">0</output> Blue
-      </form>
-      <output name="hex" for="a g b">#000000</output>
-
-      <table>
-        <caption>Color Combination Chart</caption>
-        <thead>
-          <tr>
-            <th colspan="1"></th>
-            <th colspan="3"></th>
-            <th colspan="1"></th>
-          </tr>
-          <tr>
-            <td>Red</td>
-            <td>Green</td>
-            <td>Blue</td>
-            <td>Combination</td>
-          </tr>
-
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>RBG Value</td>
-            <td>92</td>
-            <td>18</td>
-            <td>90</td>
-          </tr>
-          <tr>
-            <td>Hex Value</td>
-            <td>160</td>
-            <td>40</td>
-            <td>200</td>
-          </tr>
-
-        </tbody>
-
-        <tfoot>
-        <tr>
-          <td>RGB Combination</td>
-          <td>Value 1</td>
-        </tr>
-        <tr>
-          <td>Hex Combination</td>
-          <td>Value 2</td>
-        </tr>
-        </tfoot>
-      </table>
-
   </body>
 </html>
